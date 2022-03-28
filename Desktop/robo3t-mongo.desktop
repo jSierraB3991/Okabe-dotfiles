@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=1.65.0
+Name=Robo 3T
+Comment=MongoDB management tool
+Path=/opt/robo3t
+Exec=/opt/robo3t/bin/robo3t
+Icon=robo3t
+Terminal=false
+Categories=Development;DB;
