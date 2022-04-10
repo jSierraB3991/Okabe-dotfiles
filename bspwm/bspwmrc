@@ -30,7 +30,7 @@ $HOME/.config/polybar/launch.sh
 picom --experimental-backends &
 
 # Set wallpaper
-feh --bg-fill "$HOME/Images/Wallpapers/yesterday.jpg"
+feh --bg-fill "$HOME/Images/Wallpapers/tree.jpg"
 # Hex Gang
 hsetroot -solid "#192022"
 
