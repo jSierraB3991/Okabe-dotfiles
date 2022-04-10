@@ -1,0 +1,71 @@
+#!/bin/sh
+
+# ##############################################################################
+# #                                  ENV VARS                                  # 
+# ##############################################################################
+
+export BROWSER=firefox
+export EDITOR=vim
+export _JAVA_AWT_WM_NONREPARENTING=1 # Fix for JetBrains IDEs
+
+pgrep -x sxhkd > /dev/null || sxhkd &
+
+# ##############################################################################
+# #                                  FUNCTIONS                                 # 
+# ##############################################################################
+
+# Credits to 6gk/polka
+rule() { bspc rule -a "$@" & }
+config() { bspc config "$@" & }
+start() { pkill -x "$1"; { sleep 0.1; "$@" & }; }
+
+# ##############################################################################
+# #                                AUTOSTART APPS                              #
+# ##############################################################################
+
+# Autostart Apps
+# $HOME/.local/bin/eww daemon &
+$HOME/.local/bin/eww open bar &
+picom --experimental-backends &
+
+# Set wallpaper
+feh --bg-fill "$HOME/Images/Wallpapers/army.png"
+# Hex Gang
+hsetroot -solid "#192022"
+
+# I hate mouse drift.
+xset m 0 0
+
+# Fix for eww bar not hiding on a fullscreen window.
+$HOME/.config/bspwm/bin/ewwFlScr &
+
+# ##############################################################################
+# #                                 WINDOW RULES                               #
+# ##############################################################################
+
+bspc monitor -d 1 2 3 4 5 6
+
+rule kitty                          desktop=1
+rule firefox                        desktop=2
+#rule discord                        desktop=3
+#rule Code                           desktop=4
+rule mpv                            desktop=6
+
+# ##############################################################################
+# #                            GENERAL CONFIGURATION                           #
+# ##############################################################################
+
+config pointer_modifier             Mod4
+
+config window_gap                   10
+config left_padding                 46
+
+config split_ratio                  0.5
+config borderless_monocle           true
+config gapless_monocle              true
+
+# ##############################################################################
+# #                                 MISCELLANEOUS                              #
+# ##############################################################################
+
+start $HOME/.local/bin/brdr

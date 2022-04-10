@@ -1,0 +1,8 @@
+#!/bin/bash
+
+rofi -disable-history \
+-modi "drun" -show drun \
+-location 0 \
+-font "Sarasa Mono CL Nerd Font 8.2" \
+-theme $HOME/.config/rofi/appmnu.rasi
+# -xoffset +61 \
