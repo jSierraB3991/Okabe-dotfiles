@@ -25,9 +25,9 @@ start() { pkill -x "$1"; { sleep 0.1; "$@" & }; }
 
 # Autostart Apps
 # $HOME/.local/bin/eww daemon &
-#$HOME/.local/bin/eww open bar &
 $HOME/.config/polybar/launch.sh
 picom --experimental-backends &
+conky &
 
 # Set wallpaper
 feh --bg-fill "$HOME/Images/Wallpapers/tree.jpg"

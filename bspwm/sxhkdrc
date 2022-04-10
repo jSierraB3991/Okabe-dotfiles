@@ -6,6 +6,10 @@ super + Return
 super + d
    sh $HOME/.local/bin/appmnu
 
+# program launcher
+super + shift + d
+   rofi -show combi -theme $HOME/.config/awesome/theme/rofi.rasi
+
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd
