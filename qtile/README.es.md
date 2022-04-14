@@ -4,7 +4,7 @@
 
 ***Idioma***
 - 🇪🇸 Español
-- [🇺🇸 English](https://github.com/jSierraB3991/dotfiles/blob/main/qtile)
+- [🇺🇸 English](https://github.com/OkabeRitarou/dotfiles/blob/main/qtile)
 
 ## Instalación (Arch)
 
