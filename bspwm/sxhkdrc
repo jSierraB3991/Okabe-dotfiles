@@ -138,10 +138,4 @@ super + shift + z
     $HOME/.config/bin/scrot.sh -s
 
 super +  x
-    i3lock-fancy
-
-super + alt + n
-    sh $HOME/.local/bin/notifcntr
-
-super + shift + f
-    sh $HOME/.local/bin/tglbar
+    i3lock -c 000000

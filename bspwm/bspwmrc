@@ -8,7 +8,7 @@ export BROWSER=firefox
 export EDITOR=vim
 export _JAVA_AWT_WM_NONREPARENTING=1 # Fix for JetBrains IDEs
 
-pgrep -x sxhkd > /dev/null || sxhkd &
+pgrep -x sxhkd > /dev/null || sxhkd -c ~/.config/bspwm/sxhkdrc &
 
 # ##############################################################################
 # #                                  FUNCTIONS                                 # 
@@ -30,7 +30,7 @@ picom --experimental-backends &
 conky &
 
 # Set wallpaper
-feh --bg-fill "$HOME/Images/Wallpapers/tree.jpg"
+feh --bg-fill "$HOME/Source/Wallpapers/tree.jpg"
 # Hex Gang
 hsetroot -solid "#192022"
 
