@@ -138,4 +138,4 @@ super + shift + z
     $HOME/.config/bin/scrot.sh -s
 
 super +  x
-    i3lock -c 000000
+    i3lock-fancy
