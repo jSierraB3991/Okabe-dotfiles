@@ -1,7 +1,7 @@
 #!/usr/bin/bash
  
 if bspc query -N -n focused.floating > /dev/null; then
-    step=20
+    step=10
 else
     step=100
 fi
