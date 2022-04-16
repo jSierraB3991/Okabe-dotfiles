@@ -139,3 +139,6 @@ super + shift + z
 
 super +  x
     i3lock-fancy
+
+super + v
+    clipcat-menu
