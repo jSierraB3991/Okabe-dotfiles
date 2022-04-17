@@ -29,11 +29,11 @@ killall conky
 killalll clipcatd
 $HOME/.config/polybar/launch.sh
 picom --experimental-backends &
-#conky &
+conky &
 clipcatd &
 
 # Set wallpaper
-feh --bg-fill "$HOME/Source/Wallpapers/tree.jpg"
+feh --bg-fill "$HOME/Source/Wallpapers/obey.png"
 # Hex Gang
 hsetroot -solid "#192022"
 
