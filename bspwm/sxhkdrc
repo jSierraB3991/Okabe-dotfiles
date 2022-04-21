@@ -142,3 +142,6 @@ super +  x
 
 super + v
     clipcat-menu
+
+XF86Audio{Mute,LowerVolume,RaiseVolume}
+   ~/.config/bin/volume.sh {mute, down, up}
