@@ -24,13 +24,13 @@ start() { pkill -x "$1"; { sleep 0.1; "$@" & }; }
 # ##############################################################################
 
 # Autostart Apps
-# $HOME/.local/bin/eww daemon &
-killall conky
 killalll clipcatd
 $HOME/.config/polybar/launch.sh
+$HOME/.config/bin/power_pc_2am.sh &
 picom --experimental-backends &
 conky &
 clipcatd &
+
 
 # Set wallpaper
 feh --bg-fill "$HOME/Source/Wallpapers/obey.png"
@@ -51,7 +51,7 @@ bspc monitor -d 1 2 3 4 5 6
 
 rule kitty                          desktop=1
 rule firefox                        desktop=2
-#rule discord                        desktop=3
+rule pcmanfm                        desktop=5
 #rule Code                           desktop=4
 rule mpv                            desktop=6
 
