@@ -24,9 +24,13 @@ start() { pkill -x "$1"; { sleep 0.1; "$@" & }; }
 # ##############################################################################
 
 # Autostart Apps
-killalll clipcatd
+killall clipcatd
+killall power_pc_2am.sh
+killall listeng_port_listeng.sh
+
 $HOME/.config/polybar/launch.sh
 $HOME/.config/bin/power_pc_2am.sh &
+$HOME/.config/bin/listeng_port_listeng.sh &
 picom --experimental-backends &
 conky &
 clipcatd &
@@ -52,7 +56,6 @@ bspc monitor -d 1 2 3 4 5 6
 rule kitty                          desktop=1
 rule firefox                        desktop=2
 rule pcmanfm                        desktop=5
-#rule Code                           desktop=4
 rule mpv                            desktop=6
 
 # ##############################################################################
@@ -60,6 +63,7 @@ rule mpv                            desktop=6
 # ##############################################################################
 
 config pointer_modifier             Mod4
+#rule Code                           desktop=4
 
 config window_gap                   10
 config left_padding                 10
