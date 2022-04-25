@@ -1,6 +1,6 @@
 configuration {
 	/* Override config */
-	modi: "drun,window,system:~/.config/bin/powermenu.sh";
+	modi: "drun,window,system:~/Source/dotfiles/scripts/powermenu.sh";
 	scroll-method: 0;
 	window-format: "{c} {t}";
 }
