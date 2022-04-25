@@ -45,7 +45,6 @@ hsetroot -solid "#192022"
 xset m 0 0
 
 # Fix for eww bar not hiding on a fullscreen window.
-$HOME/.config/bspwm/bin/ewwFlScr &
 
 # ##############################################################################
 # #                                 WINDOW RULES                               #
@@ -75,5 +74,3 @@ config gapless_monocle              true
 # ##############################################################################
 # #                                 MISCELLANEOUS                              #
 # ##############################################################################
-
-start $HOME/.local/bin/brdr
