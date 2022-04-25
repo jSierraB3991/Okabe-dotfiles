@@ -29,8 +29,8 @@ killall power_pc_2am.sh
 killall listeng_port_listeng.sh
 
 $HOME/.config/polybar/launch.sh
-$HOME/.config/bin/power_pc_2am.sh &
-$HOME/.config/bin/listeng_port_listeng.sh &
+$HOME/Source/scripts/bash/power_pc_2am.sh &
+$HOME/Source/scripts/bash/listeng_port_listeng.sh &
 picom --experimental-backends &
 conky &
 clipcatd &
