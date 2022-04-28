@@ -24,6 +24,7 @@ start() { pkill -x "$1"; { sleep 0.1; "$@" & }; }
 # ##############################################################################
 
 # Autostart Apps
+clipcatctl clear
 killall clipcatd
 killall power_pc_2am.sh
 killall listeng_port_listeng.sh
