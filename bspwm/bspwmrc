@@ -26,6 +26,7 @@ start() { pkill -x "$1"; { sleep 0.1; "$@" & }; }
 # Autostart Apps
 clipcatctl clear
 killall clipcatd
+#killall screenkey
 killall power_pc_2am.sh
 killall listeng_port_listeng.sh
 
@@ -33,9 +34,10 @@ $HOME/.config/polybar/launch.sh
 $HOME/Source/scripts/bash/power_pc_2am.sh &
 $HOME/Source/scripts/bash/listeng_port_listeng.sh &
 picom --experimental-backends &
+
 conky &
 clipcatd &
-
+#screenkey -s small &
 
 # Set wallpaper
 feh --bg-fill "$HOME/Source/Wallpapers/obey.png"
