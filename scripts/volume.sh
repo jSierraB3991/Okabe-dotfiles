@@ -3,10 +3,36 @@
 icon_path=/usr/share/icons/Adwaita/64x64/status/
 notify_id=506
 sink_nr=1   # use `pacmd list-sinks` to find out sink_nr
+MIXER="pulse"
+SCONTROL="Master"
+
+#------------------------------------------------------------------------
+
+capability() { # Return "Capture" if the device is a capture device
+  amixer -D $MIXER get $SCONTROL |
+    sed -n "s/  Capabilities:.*cvolume.*/Capture/p"
+}
+
+volume() {
+  amixer -D $MIXER get $SCONTROL $(capability)
+}
+
+format() {
+  
+  perl_filter='if (/.*\[(\d+%)\] (\[(-?\d+.\d+dB)\] )?\[(on|off)\]/)'
+  perl_filter+='{CORE::say $4 eq "off" ? "MUTE" : "'
+  # If dB was selected, print that instead
+  perl_filter+=$([[ $STEP = *dB ]] && echo '$3' || echo '$1')
+  perl_filter+='"; exit}'
+  output=$(perl -ne "$perl_filter")
+  echo "$LABEL$output"
+}
+
+#------------------------------------------------------------------------
 
 
 function get_volume {
-    $HOME/.config/bin/volume | head -n1 | cut -d '%' -f 1
+    volume | format | head -n1 | cut -d '%' -f 1
 }
 
 function get_volume_icon {
