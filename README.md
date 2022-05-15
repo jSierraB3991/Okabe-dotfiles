@@ -6,6 +6,6 @@
 
 
 <h2> Endeavour Withith Bswpm </h2>
-<img src="https://raw.githubusercontent.com/OkabeRitarou/dotfiles/main/bspwm/endeavour-bspwm.png" />
+<img src="https://raw.githubusercontent.com/OkabeRitarou/dotfiles/main/bspwm/arch-bspwm.png" />
 
 
