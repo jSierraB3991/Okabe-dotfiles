@@ -34,7 +34,6 @@ $HOME/.config/polybar/launch.sh
 $HOME/Source/scripts/bash/power_pc_2am.sh &
 $HOME/Source/scripts/bash/listeng_port_listeng.sh &
 picom --experimental-backends &
-
 conky &
 clipcatd &
 #screenkey -s small &
@@ -47,6 +46,8 @@ hsetroot -solid "#192022"
 # I hate mouse drift.
 xset m 0 0
 
+#fix cursor
+xsetroot -cursor_name left_ptr &
 # Fix for eww bar not hiding on a fullscreen window.
 
 # ##############################################################################
