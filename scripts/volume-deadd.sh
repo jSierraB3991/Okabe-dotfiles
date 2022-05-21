@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
-icon_path=/usr/share/icons/Adwaita/64x64/status/
-notify_id=506
+notify_id=$(cat $HOME/.local/data/volume_id.txt | head -1)
+if [ "$notify_id" == "" ]; then
+    notify_id=0
+fi
 sink_nr=1   # use `pacmd list-sinks` to find out sink_nr
 MIXER="pulse"
 SCONTROL="Master"
@@ -44,15 +46,15 @@ function get_volume_icon {
 
     if [ $num -lt 34 ]
     then
-        echo -n "audio-volume-low-symbolic.symbolic.png"
+        echo "audio-volume-low"
     elif [ $num -lt 67 ]
     then
-        echo -n "audio-volume-medium-symbolic.symbolic.png"
+        echo "audio-volume-medium"
     elif [ $num -le 100 ]
     then
-        echo -n "audio-volume-high-symbolic.symbolic.png"
+        echo "audio-volume-high"
     else
-        echo -n "audio-volume-overamplified-symbolic.symbolic.png"
+        echo "audio-volume-overamplified"
     fi
 }
 
@@ -60,7 +62,9 @@ function volume_notification {
     volume=`get_volume`
     vol_icon=`get_volume_icon $volume`
     bar=$(seq -s "─" $(($volume / 5)) | sed 's/[0-9]//g')
-    dunstify -r $notify_id -u low -i $icon_path$vol_icon $bar
+
+    new_id=$(notify-send $bar -u low -i $vol_icon --replace-id $notify_id -p)
+    echo $new_id > $HOME/.local/data/volume_id.txt
 }
 
 function mute_notification {
@@ -68,9 +72,11 @@ function mute_notification {
 
     if [ "$muted" == "MUTE" ]
     then
-        dunstify -r $notify_id -u low -i ${icon_path}audio-volume-muted-symbolic.symbolic.png mute
+        new_id=$(notify-send "Muted" -u low -i audio-volume-mute --replace-id $notify_id -p)
+        echo $new_id > $HOME/.local/data/volume_id.txt
     else
-        dunstify -r $notify_id -u low -i ${icon_path}`get_volume_icon $muted` unmute
+        new_id=$(notify-send "UMuted" -u low -i $(get_volume_icon $muted) --replace-id $notify_id -p)
+        echo $new_id > $HOME/.local/data/volume_id.txt
     fi
 }
 

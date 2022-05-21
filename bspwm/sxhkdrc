@@ -141,10 +141,13 @@ alt + shift + z
     $HOME/.config/bin/scrot.sh -s
 
 alt +  x
-    i3lock-fancy
+    i3lock -c 000000
 
 alt + v
     clipcat-menu
 
 XF86Audio{Mute,LowerVolume,RaiseVolume}
-   ~/.config/bin/volume.sh {mute, down, up}
+   ~/.config/bin/volume-deadd.sh {mute, down, up}
+
+alt + z
+    kill -s USR1 $(pidof deadd-notification-center)
