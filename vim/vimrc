@@ -55,5 +55,8 @@ Plug 'preservim/nerdtree'
 "cerrador de simbolos
 Plug 'dhruvasagar/vim-pairify'
 
+"Rust plugin
+Plug 'rust-lang/rust.vim'
+
 "===============================================================================
 call plug#end()
