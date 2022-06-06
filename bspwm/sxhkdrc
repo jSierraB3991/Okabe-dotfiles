@@ -3,20 +3,18 @@ alt + Return
     kitty
 
 # program launcher
-alt + d
-   sh $HOME/.local/bin/appmnu
+alt + shift +  d
+   rofi -show combi -show-icons
 
+#rofi -show combi -theme ~/Source/dotfiles/rofi/global-menu/appsmenu.rasi
 # program launcher
-alt + shift + d
-   rofi -show combi -theme ~/Source/dotfiles/rofi/global-menu/appsmenu.rasi
-
-alt + super + d
+alt + d
     rofi -no-lazy-grab -show drun -theme ~/Source/dotfiles/rofi/global-menu/appsmenu.rasi
+    
 
 # make sxhkd reload its configuration files:
 alt + Escape
 	pkill -USR1 -x sxhkd
-
 #
 # bspwm hotkeys
 #
@@ -138,10 +136,10 @@ Print
     $HOME/.config/bin/scrot.sh -m
 
 alt + shift + z
-    $HOME/.config/bin/scrot.sh -s
+   flameshot gui 
 
 alt +  x
-    i3lock -c 000000
+    i3lock-fancy
 
 alt + v
     clipcat-menu
