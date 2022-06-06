@@ -39,7 +39,7 @@ clipcatd &
 #screenkey -s small &
 
 # Set wallpaper
-feh --bg-fill "$HOME/Source/Wallpapers/obey.png"
+feh --bg-fill "$HOME/Source/Wallpapers/t6wjfodzrt391.png"
 # Hex Gang
 hsetroot -solid "#192022"
 
