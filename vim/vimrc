@@ -49,6 +49,9 @@ Plug 'davidhalter/jedi-vim'
 "Rust plugin
 Plug 'rust-lang/rust.vim'
 
+"Go Plugin
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+
 "Nerd Tree
 Plug 'preservim/nerdtree'
 
