@@ -1,45 +1,23 @@
-# Qtile Config File
-# http://www.qtile.org/
-
-# Antonio Sarosi
-# https://youtube.com/c/antoniosarosi
-# https://github.com/antoniosarosi/dotfiles
-
-
-from libqtile import hook
-
-from settings.keys import mod, keys
-from settings.groups import groups
-from settings.layouts import layouts, floating_layout
-from settings.widgets import widget_defaults, extension_defaults
-from settings.screens import screens
-from settings.mouse import mouse
-from settings.path import qtile_path
-
-from os import path
-import subprocess
+from seetings.keys import mod, keys
+from seetings.groups import groups
+#from modules.keys import keys, mod
+#from modules.groups import groups
+from modules.layouts import layouts, floating_layout
+from modules.mouse import mouse
+from modules.hooks import *
 import os
-
-@hook.subscribe.startup_once
-def autostart():
-    subprocess.call([path.join(qtile_path, 'autostart.sh')])
-
-
-main = None
+from modules.screens import screens
 dgroups_key_binder = None
-dgroups_app_rules = []
-follow_mouse_focus = False
+dgroups_app_rules = []  # type: List
+main = None  # WARNING: this is deprecated and will be removed soon
+follow_mouse_focus = True
 bring_front_click = False
-cursor_warp = True
+cursor_warp = False
 auto_fullscreen = True
-focus_on_window_activation = 'urgent'
-wmname = 'LG3D'
-
-autostart = [
-    "feh --bg-fill /home/lelouch-lamperouge/Images/Wallpapers/evil\ girl.png",
-    "picom &",
-    "conky &"
-]
-for x in autostart:
-    os.system(x)
-
+focus_on_window_activation = "smart"
+wmname = "Qtile"
+widget_defaults = dict(
+        font='Cascadia Code',
+        fontsize=13,
+        padding=3
+)

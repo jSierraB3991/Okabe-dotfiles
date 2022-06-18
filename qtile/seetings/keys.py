@@ -47,7 +47,7 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
     # ------------ App Configs ------------
 
     # Menu
-    ([mod], "d", lazy.spawn("rofi -show drun -theme Monokai -icon-theme Tela-circle -show-icons")),
+    ([mod], "d", lazy.spawn("rofi -no-lazy-grab -show drun -theme Source/dotfiles/rofi/global-menu/appsmenu.rasi -show-icons")),
 
     # Browser
     ([mod], "f", lazy.spawn("firefox")),
@@ -59,28 +59,27 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
 
     # Terminal
     ([mod], "Return", lazy.spawn("kitty")),
+    #clipboard history
+    ([mod], "z", lazy.spawn("clipcat-menu")),
     # Lock screen
-    ([mod], "z", lazy.spawn("i3lock -c 000000")),
-    ([mod, "shift"], "z", lazy.spawn("i3lock-fancy")),
-
-    # Redshift
-    ([mod], "r", lazy.spawn("redshift -O 2400")),
-    ([mod, "shift"], "r", lazy.spawn("redshift -x")),
+    ([mod], "x", lazy.spawn("i3lock-fancy")),
+    #Notification center
+    ([mod, "shift"], "z", lazy.spawn("kill -s USR1 $(pidof deadd-notification-center)")),
 
     # Screenshot
-    ([mod], "s", lazy.spawn("xfce4-screenshooter")),
-    ([mod, "shift"], "s", lazy.spawn("xfce4-screenshooter -f -s Imágenes")),
+    ([mod, "shift"], "s", lazy.spawn("flameshot gui")),
+    ([mod], "s", lazy.spawn("/home/lelouch/.config/bin/scrot.sh -m")),
 
     # ------------ Hardware Configs ------------
 
     # Volume
     ([], "XF86AudioLowerVolume", lazy.spawn(
-        "pactl set-sink-volume @DEFAULT_SINK@ -5%"
+        "/home/lelouch/.config/bin/volume-deadd.sh down"
     )),
     ([], "XF86AudioRaiseVolume", lazy.spawn(
-        "pactl set-sink-volume @DEFAULT_SINK@ +5%"
+        "/home/lelouch/.config/bin/volume-deadd.sh up"
     )),
     ([], "XF86AudioMute", lazy.spawn(
-        "pactl set-sink-mute @DEFAULT_SINK@ toggle"
+        "/home/lelouch/.config/bin/volume-deadd.sh mute"
     )),
 ]]
