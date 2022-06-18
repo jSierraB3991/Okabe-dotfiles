@@ -64,7 +64,7 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
     # Lock screen
     ([mod], "x", lazy.spawn("i3lock-fancy")),
     #Notification center
-    ([mod, "shift"], "z", lazy.spawn("kill -s USR1 $(pidof deadd-notification-center)")),
+    ([mod, "shift"], "z", lazy.spawn("/home/lelouch/.config/bin/run-notification-center.sh")),
 
     # Screenshot
     ([mod, "shift"], "s", lazy.spawn("flameshot gui")),
