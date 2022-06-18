@@ -32,7 +32,6 @@ screens = [
                     },
                     name_transform=lambda name: name.upper(),
                 ),
-                widget.CurrentLayoutIcon(scale=0.75),
                 widget.CheckUpdates(
                     update_interval=1800,
                     distro="Arch_yay",
@@ -74,10 +73,10 @@ screens = [
                        foreground='#2f343f',
                        ),   
                 widget.TextBox(
-                    text='',
+                    text=' ',
                     mouse_callbacks= {
                         'Button1':
-                        lambda: qtile.cmd_spawn(os.path.expanduser('~/.config/rofi/powermenu.sh'))
+                        lambda: qtile.cmd_spawn(os.path.expanduser('~/.config/bin/run-notification-center.sh'))
                     },
                     foreground='#e39378'
                 )
