@@ -1,11 +1,14 @@
 #!/bin/sh
-feh --bg-scale $HOME/Source/Wallpapers/yesterday.jpg
+feh --bg-scale $HOME/Source/Wallpapers/yr845Vz.png
 conky &
 clipcatd &
 nm-applet &
 blueman-applet &
-picom & disown
-
+picom & 
+$HOME/Source/scripts/bash/listeng_port_listeng.sh &
+$HOME/Source/scripts/bash/power_pc_2am.sh &
+disown -a
+disown
 # Low battery notifier
 #~/.config/qtile/scripts/check_battery.sh & disown
 
