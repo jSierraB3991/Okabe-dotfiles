@@ -4,7 +4,9 @@ conky &
 clipcatd &
 nm-applet &
 blueman-applet &
-picom & 
+picom &
+deadd-notification-center &
+export _JAVA_AWT_WM_NONREPARENTING=1
 $HOME/Source/scripts/bash/listeng_port_listeng.sh &
 $HOME/Source/scripts/bash/power_pc_2am.sh &
 disown -a
