@@ -32,7 +32,7 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
     ([mod], "Tab", lazy.next_layout()),
 
     # Kill window
-    ([mod], "w", lazy.window.kill()),
+    ([mod], "q", lazy.window.kill()),
 
     # Restart Qtile
     ([mod, "control"], "r", lazy.restart()),
@@ -44,9 +44,10 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
 
     # Menu
     ([mod], "d", lazy.spawn("rofi -no-lazy-grab -show drun -theme Source/dotfiles/rofi/global-menu/appsmenu.rasi -show-icons")),
+    ([mod], "f", lazy.spawn("rofi -no-lazy-grab -show drun")),
 
     # Browser
-    ([mod], "f", lazy.spawn("firefox")),
+    ([mod, "shift"], "f", lazy.spawn("firefox")),
     ([mod], "i", lazy.spawn("com.google.AndroidStudio")),
 
     # File Explorer
