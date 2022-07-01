@@ -18,7 +18,7 @@ auto_fullscreen = True
 focus_on_window_activation = "urgent"
 #wmname = "Qtile"
 wmname = 'LG3D'
-
+EDITOR='vim'
 widget_defaults = dict(
         font='Cascadia Code',
         fontsize=11,
