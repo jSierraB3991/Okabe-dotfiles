@@ -19,6 +19,7 @@ set hlsearch
 
 "Map keys
 map <F3> : NERDTreeToggle
+map <F4> : NERDTreeFocus
 
 "Auto instalaci`on de plug
 if empty(glob('~/.vim/autoload/plug.vim'))
