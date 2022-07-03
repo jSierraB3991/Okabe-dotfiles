@@ -30,11 +30,11 @@ clipcatctl clear
 killall clipcatd
 #killall screenkey
 killall power_pc_2am.sh
-killall listeng_port_listeng.sh
+killall listeng_port_listeng_diff.sh
 
 $HOME/.config/polybar/launch.sh
 $HOME/Source/scripts/bash/power_pc_2am.sh &
-$HOME/Source/scripts/bash/listeng_port_listeng.sh &
+$HOME/Source/scripts/bash/listeng_port_listeng_diff.sh &
 picom --experimental-backends &
 conky &
 clipcatd &
