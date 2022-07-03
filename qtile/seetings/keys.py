@@ -43,8 +43,7 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
     # ------------ App Configs ------------
 
     # Menu
-    ([mod], "d", lazy.spawn("rofi -no-lazy-grab -show drun -theme Source/dotfiles/rofi/global-menu/appsmenu.rasi -show-icons")),
-    ([mod], "f", lazy.spawn("rofi -no-lazy-grab -show drun")),
+    ([mod], "d", lazy.spawn("rofi -no-lazy-grab -show drun")),
 
     # Browser
     ([mod, "shift"], "f", lazy.spawn("firefox")),
@@ -65,7 +64,7 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
 
     # Screenshot
     ([mod, "shift"], "s", lazy.spawn("flameshot gui")),
-    ([mod], "s", lazy.spawn("/home/lelouch/.config/bin/scrot.sh -m")),
+    ([mod], "s", lazy.spawn("flameshot full -p /home/lelouch/Images/screenshot")),
 
     # ------------ Hardware Configs ------------
 
