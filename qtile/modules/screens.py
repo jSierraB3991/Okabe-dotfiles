@@ -8,7 +8,8 @@ screens = [
     Screen(
         top=bar.Bar(
             [   widget.Sep(padding=3, linewidth=0, background="#2f343f"),
-                widget.Image(filename='~/.config/qtile/eos-c.png', margin=3, background="#2f343f", mouse_callbacks={'Button1': lambda: qtile.cmd_spawn("rofi -show combi")}),
+                widget.Image(filename='~/.config/qtile/eos-c.png', margin=3, background="#2f343f", 
+                    mouse_callbacks={'Button1': lambda: qtile.cmd_spawn("rofi -show combi -theme /home/lelouch/Source/dotfiles/rofi/global-menu/appsmenu.rasi")}),
                 widget.Sep(padding=4, linewidth=0, background="#2f343f"), 
                 widget.GroupBox(
                                 highlight_method='line',
