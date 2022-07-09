@@ -43,7 +43,7 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
     # ------------ App Configs ------------
 
     # Menu
-    ([mod], "d", lazy.spawn("rofi -no-lazy-grab -show drun")),
+    ([mod], "d", lazy.spawn("rofi -no-lazy-grab -show drun -theme dmenu")),
 
     # Browser
     ([mod, "shift"], "f", lazy.spawn("firefox")),
