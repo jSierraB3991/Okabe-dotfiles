@@ -18,8 +18,18 @@ set incsearch
 set hlsearch
 
 "Map keys
+map <F2> : vsp
 map <F3> : NERDTreeToggle
 map <F4> : NERDTreeFocus
+map <F5> : spli
+map <F6> : tabnew
+" ctrl+w + {[h,j,k,l] our [up, left, rigt, down]} => move in the windows
+" tabm, tabm 0 => move to last tab our first tab
+" tabfirst, tablast => go to first tab our last tab
+" tabn, tabp => go to next tab our previw tab
+" in tree, t open new tab, T open new tab silence
+" in tree, i open new window in split
+" in tree, shift + i, show hidden files and folder
 
 "Auto instalaci`on de plug
 if empty(glob('~/.vim/autoload/plug.vim'))
@@ -61,6 +71,8 @@ Plug 'dhruvasagar/vim-pairify'
 
 "Rust plugin
 Plug 'rust-lang/rust.vim'
+
+Plug 'jiangmiao/auto-pairs'
 
 "===============================================================================
 call plug#end()
