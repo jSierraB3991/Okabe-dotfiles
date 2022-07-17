@@ -31,6 +31,7 @@ map <F6> : tabnew
 " in tree, i open new window in split
 " in tree, shift + i, show hidden files and folder
 
+map <F12> : PlugInstall
 "Auto instalaci`on de plug
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent execute '!curl -fLo '.'~/.vim/autoload/plug.vim --create-dirs 
