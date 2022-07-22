@@ -1,5 +1,5 @@
 #!/bin/sh
-feh --bg-scale $HOME/Images/background/cy0t53hrgi791.jpg
+/home/lelouch/Source/scripts/bash/change_automatic_wallpaper_one.sh &
 conky &
 clipcatd &
 nm-applet &
