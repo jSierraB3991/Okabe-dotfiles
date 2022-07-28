@@ -32,6 +32,7 @@ killall clipcatd
 killall power_pc_2am.sh
 killall listeng_port_listeng_diff.sh
 
+dead-notification-center &
 $HOME/.config/polybar/launch.sh
 $HOME/Source/scripts/bash/power_pc_2am.sh &
 $HOME/Source/scripts/bash/listeng_port_listeng_diff.sh &
@@ -41,7 +42,12 @@ clipcatd &
 #screenkey -s small &
 
 # Set wallpaper
-feh --bg-fill "$HOME/Source/Wallpapers/t6wjfodzrt391.png"
+feh --bg-fill "$HOME/Source/Wallpapers/3006390.jpg"
+
+
+nm-applet &
+blueman-applet &
+
 # Hex Gang
 hsetroot -solid "#192022"
 
@@ -56,7 +62,7 @@ xsetroot -cursor_name left_ptr &
 # #                                 WINDOW RULES                               #
 # ##############################################################################
 
-bspc monitor -d 1 2 3 4 5 6
+bspc monitor -d 1 2 3 4 5 6 7
 
 rule kitty                          desktop=1
 rule firefox                        desktop=2
@@ -77,6 +83,9 @@ config split_ratio                  0.5
 config borderless_monocle           true
 config gapless_monocle              true
 
+
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+disown
 # ##############################################################################
 # #                                 MISCELLANEOUS                              #
 # ##############################################################################
