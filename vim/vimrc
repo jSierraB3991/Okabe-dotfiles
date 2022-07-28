@@ -24,6 +24,7 @@ map <F4> : NERDTreeFocus
 map <F5> : spli
 map <F6> : tabnew
 map <F7> : tabn
+":new file !mkdir folder
 " ctrl+w + {[h,j,k,l] our [up, left, rigt, down]} => move in the windows
 " tabm, tabm 0 => move to last tab our first tab
 " tabfirst, tablast => go to first tab our last tab
