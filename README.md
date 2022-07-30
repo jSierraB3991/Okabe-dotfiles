@@ -4,8 +4,5 @@
 <h2> Endervaour With Awesome wm </h2>
 <img src="https://raw.githubusercontent.com/OkabeRitarou/dotfiles/main/awesome/endeavour-awesome.png" />
 
-
 <h2> Arch Withith Bswpm </h2>
-<img src="https://raw.githubusercontent.com/OkabeRitarou/dotfiles/main/bspwm/1654833458.png" />
-
-
+<img src="https://raw.githubusercontent.com/OkabeRitarou/dotfiles/main/bspwm/arch-bspwm.png" />
