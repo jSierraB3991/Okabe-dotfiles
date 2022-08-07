@@ -22,3 +22,20 @@ help() {
 man() {
     /usr/bin/man $@ | batman
 }
+
+git-pull-unrelated() {
+    branch=$1
+    if [ "$branch" != "" ]; then
+        if [ -d ".git"  ]; then
+            for branchLocal in $(git branch | sed 's/*//g'); do
+                if [[ "$branchLocal" == "$branch" ]]; then
+                    git pull origin $branch --allow-unrelated-histories
+                fi
+            done
+        else
+            cowsay "Imbecil, Iam need a repository"
+        fi
+    else
+        cowsay "Imbecil, Iam waiting one parameter"
+    fi
+}
