@@ -144,6 +144,9 @@ super +  x
 super + v
     clipcat-menu
 
+super + shift + v
+    clipcat-menu remove
+
 XF86Audio{Mute,LowerVolume,RaiseVolume}
    ~/.config/bin/volume-deadd.sh {mute, down, up}
 
