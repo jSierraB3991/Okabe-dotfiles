@@ -17,6 +17,10 @@ set colorcolumn=+1
 set incsearch
 set hlsearch
 
+"morhetz/gruvbox
+autocmd vimenter * ++nested colorscheme gruvbox
+set background=dark
+
 "Map keys
 map <F2> : vsp
 map <F3> : NERDTreeToggle
@@ -76,6 +80,8 @@ Plug 'dhruvasagar/vim-pairify'
 Plug 'rust-lang/rust.vim'
 
 Plug 'jiangmiao/auto-pairs'
+
+Plug 'morhetz/gruvbox'
 
 "===============================================================================
 call plug#end()
