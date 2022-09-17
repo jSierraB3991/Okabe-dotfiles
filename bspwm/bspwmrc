@@ -23,7 +23,7 @@ start() { pkill -x "$1"; { sleep 0.1; "$@" & }; }
 # #                                AUTOSTART APPS                              #
 # ##############################################################################
 #loadkeymap
-setxkbmap -layout es
+setxkbmap -layout us
 
 # Autostart Apps
 clipcatctl clear
