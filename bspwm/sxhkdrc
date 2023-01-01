@@ -142,10 +142,7 @@ super +  x
     i3lock-fancy
 
 super + v
-    clipcat-menu
-
-super + shift + v
-    clipcat-menu remove
+    copyq menu
 
 XF86Audio{Mute,LowerVolume,RaiseVolume}
    ~/.config/bin/volume-deadd.sh {mute, down, up}
