@@ -27,14 +27,20 @@ setxkbmap -layout us
 
 # Autostart Apps
 clipcatctl clear
-killall copyq
 #killall screenkey
 killall power_pc_2am.sh
 killall blueman-applet
 killall listeng_port_listeng_diff.sh
+killall yakuake
+killall picom
+killall conky
+killall deadd-notification-center
+killall kdeconnect-indicator
+killall  pasystray 
 
+ pasystray &
 blueman-applet &
-dead-notification-center &
+deadd-notification-center &
 $HOME/.config/polybar/launch.sh
 #$HOME/Source/scripts/bash/power_pc_2am.sh &
 $HOME/Source/scripts/bash/listeng_port_listeng_diff.sh &
@@ -42,7 +48,7 @@ picom &
 conky &
 copyq &
 #screenkey -s small &
-
+flameshot &
 # Set wallpaper
 $HOME/Source/scripts/bash/change_automatic_wallpaper_one.sh
 
@@ -93,3 +99,4 @@ disown
 # ##############################################################################
 
 yakuake &
+kdeconnect-indicator &
