@@ -5,7 +5,7 @@ alias podman-compose="sudo podman-compose"
 alias run-maria-platzi="sudo podman run --rm -d -p 3306:3306 --name mariadb-platzi -e MARIADB_USER=mariadb -e MARIADB_ROOT_PASSWORD=chroot -e MARIADB_PASSWORD=root mariadb:10.6.5-focal"
 
 alias podman-containers="sudo podman ps -a --format \"table {{.State}}\\t{{.Names}}\\t{{.ID}}\\t{{.Image}}\""
-
+alias hdmiA050="xrandr --output HDMI-A-0 --mode 1920x1080 --rate 50"
 
 ################################################################################
 ################################## GIT SSH #####################################
