@@ -11,14 +11,14 @@ set cursorline
 set cursorcolumn
 set relativenumber
 
-set textwidth=120
+set textwidth=170
 set colorcolumn=+1
 
 set incsearch
 set hlsearch
 
 "morhetz/gruvbox
-autocmd vimenter * ++nested colorscheme gruvbox
+"autocmd vimenter * ++nested colorscheme gruvbox
 set background=dark
 
 "Map keys
