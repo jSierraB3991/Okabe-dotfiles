@@ -44,9 +44,11 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
 
     # Menu
     ([mod], "d", lazy.spawn("rofi -no-lazy-grab -show drun -theme dmenu")),
+    ([mod, "shift"], "d", lazy.spawn("rofi -no-lazy-grab -show drun")),
+    ([mod], "p", lazy.spawn("rofi -no-lazy-grab -show window")),
 
     # Browser
-    ([mod, "shift"], "f", lazy.spawn("firefox")),
+    ([mod], "f", lazy.spawn("firefox")),
     ([mod], "i", lazy.spawn("com.google.AndroidStudio")),
 
     # File Explorer
@@ -56,15 +58,15 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
     # Terminal
     ([mod], "Return", lazy.spawn("kitty")),
     #clipboard history
-    ([mod], "z", lazy.spawn("clipcat-menu")),
+    ([mod], "v", lazy.spawn("copyq menu")),
     # Lock screen
     ([mod], "x", lazy.spawn("i3lock-fancy")),
     #Notification center
-    ([mod, "shift"], "z", lazy.spawn("/home/lelouch/.config/bin/run-notification-center.sh")),
+    #([mod, "shift"], "z", lazy.spawn("/home/lelouch/.config/bin/run-notification-center.sh")),
 
     # Screenshot
     ([mod, "shift"], "s", lazy.spawn("flameshot gui")),
-    ([mod], "s", lazy.spawn("flameshot full -p /home/lelouch/Images/screenshot")),
+    ([mod], "s", lazy.spawn("flameshot full")),
 
     # ------------ Hardware Configs ------------
 

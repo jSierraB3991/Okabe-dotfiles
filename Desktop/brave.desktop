@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=1.58.127
+Name=Brave
+GenericName=Web Broser
+Keywords=JavaScript;Web:Google
+Exec=/opt/brave/brave
+Icon=brave
+Terminal=false
+Type=Application
+StartupNotify=true
+StartupWMClass=brave-browser
+Categories=Internet;Web;

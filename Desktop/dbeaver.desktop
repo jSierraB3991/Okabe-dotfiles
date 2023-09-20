@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=23.2.0.202309041200
+Name=Dbeaver
+GenericName=Database Manegement
+Keywords=Mysql;PostgreSql;SqlServer;MongoDb
+Exec=/opt/dbeaver/dbeaver
+Icon=dbeaver
+Terminal=false
+Type=Application
+StartupNotify=true
+StartupWMClass=dbeaver-community
+Categories=Slq;NoSql;
